@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Book List{% endblock %}
+
+{% block content %}
+<h1>Book List</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publication Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in books %}
+        <tr>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.publication_date }}</td>
+            <td>
+                <a href="{% url 'my_app:book_update' book.pk %}">Edit</a>
+                <a href="{% url 'my_app:book_delete' book.pk %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'my_app:book_create' %}">Add Book</a>
+{% endblock %}
