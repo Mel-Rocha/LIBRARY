@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book</title>
+</head>
+<body>
+<header>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Seu cabeçalho -->
+</header>
+<main>
+    {% block content %}<!--o conteúdo de cada página extendida...-->
+    {% endblock %}<!--...aparecerá entre essa tag-->
+</main>
+
+<footer>
+    <!-- Seu rodapé -->
+</footer>
+</body>
+</html>

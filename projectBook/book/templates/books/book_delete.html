@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete Book{% endblock %}
+
+{% block content %}
+<div class="book-delete-container">
+    <h1>Delete Book</h1>
+    <p>Are you sure you want to delete "{{ book.title }}"?</p>
+    <h3>{{ book.title }}</h3>
+    <p>Author: {{ book.author }}</p>
+    <p>Subject: {{ book.subject }}</p>
+    <p>Publication Date: {{ book.publication_date }}</p>
+    <p>Language: {{ book.language }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+    </form>
+
+</div>
+    <script>
+        function confirmDelete() {
+            if (confirm('Are you sure you want to delete?')) {
+                // Submit the form
+                document.querySelector('form').submit();
+            }
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Book List{% endblock %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+{% block content %}
+<h1>Book List</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Subject</th>
+            <th>Publication Date</th>
+            <th>Language</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in books %}
+        <tr>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.subject }}</td>
+            <td>{{ book.publication_date }}</td>
+            <td>{{ book.language }}</td>
+            <td>
+                
+                <button onclick="window.location.href='{% url 'book:book_detail' book.id %}'" class="btn btn-warning">Details</button>
+                <button onclick="window.location.href='{% url 'book:book_update' book.pk %}'" class="btn btn-primary">Edit</button>
+                <button onclick="window.location.href='{% url 'book:book_delete' book.pk %}'" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<button onclick="window.location.href='{% url 'book:book_create' %}'" class="btn btn-success">Add Book</button>
+{% endblock %}

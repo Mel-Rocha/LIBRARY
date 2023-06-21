@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+{% block content %}
+<div class="book-details-container">
+    <h2>Detail of Book</h2>
+    <h3>{{ book.title }}</h3>
+    <p>Author: {{ book.author }}</p>
+    <p>Subject: {{ book.subject }}</p>
+    <p>Publication Date: {{ book.publication_date }}</p>
+    <p>Language: {{ book.language }}</p>
+
+    <td>
+        <button onclick="window.location.href='{% url 'book:book_update' book.pk %}'" class="btn btn-primary">Edit</button>
+        <button onclick="window.location.href='{% url 'book:book_delete' book.pk %}'" class="btn btn-danger">Delete</button>
+    </td>
+</div>
+{% endblock %}
