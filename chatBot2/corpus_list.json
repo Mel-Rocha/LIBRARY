@@ -1,0 +1,41 @@
+{
+    "intents": [
+      {
+        "tag": "lista_em_python",
+        "patterns": [
+          "O que é uma lista em Python?",
+          "Definição de lista em Python",
+          "Como funciona uma lista em Python?"
+        ],
+        "responses": [
+          "Uma lista em Python é uma estrutura de dados que permite armazenar e organizar uma coleção de elementos. É uma das estruturas de dados mais utilizadas em Python devido à sua versatilidade e facilidade de uso."
+        ],
+        "context": []
+      },
+      {
+        "tag": "declarar_lista",
+        "patterns": [
+          "Como declarar uma lista em Python?",
+          "Exemplos de declaração de listas em Python",
+          "Sintaxe para criar uma lista em Python"
+        ],
+        "responses": [
+          "Em Python, você pode declarar uma lista utilizando colchetes [ ] e inserindo os elementos separados por vírgulas. Aqui estão alguns exemplos de como declarar listas:\n\n- Exemplo de lista vazia: lista_vazia = []\n- Exemplo de lista com elementos: numeros = [1, 2, 3, 4, 5]\n- Exemplo de lista com tipo de dados diferentes: dados = [10, 'texto', True, 3.14]"
+        ],
+        "context": []
+      },
+      {
+        "tag": "caracteristicas_lista",
+        "patterns": [
+          "Quais são as características de uma lista em Python?",
+          "Recursos de uma lista em Python",
+          "Propriedades de uma lista em Python"
+        ],
+        "responses": [
+          "As características de uma lista em Python são:\n\n- Ordenada: Mantém a sequência dos elementos.\n- Mutável: Permite adicionar, remover e modificar elementos.\n- Heterogênea: Pode armazenar elementos de diferentes tipos.\n- Indexada: Os elementos são acessados por meio de índices.\n- Tamanho variável: Pode ter um número variável de elementos.\n- Iterável: Pode ser percorrida com um loop.\n- Suporte a métodos e funções: Possui métodos e funções embutidos para manipulação."
+        ],
+        "context": []
+      }
+    ]
+  }
+  
