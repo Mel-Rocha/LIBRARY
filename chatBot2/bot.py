@@ -31,8 +31,9 @@ for intent in intents:
         trainer.train([pattern] + responses)
 
 
-
+""""
 while True:
     query = input("You: ")
     response = chatbot.get_response(query)
     print("ChatBot: ", response)
+"""
